@@ -1,0 +1,38 @@
+{
+  "name": "cy-bdd-test-02",
+  "version": "1.0.0",
+  "description": "Cypress cucumber BDD project for EuroBase  ",
+  "main": "index.js",
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:run" : "cypress run"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^4.1.0",
+    "cypress-cucumber-preprocessor": "^2.0.1",
+    "prettier": "^1.19.1",
+    "fs": "0.0.2",
+    "fs-extra": "5.0.0",
+    "glob": "7.1.2",
+    "gulp": "3.9.1",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-cucumber": "0.0.23",
+    "gulp-run": "1.7.1",
+    "gulp-sequence": "0.4.6",
+    "js-yaml": "3.10.0",
+    "xpath.js": "1.1.0",
+    "yaml-merge": "0.0.2",
+    "yargs": "11.0.0"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": false,
+   "cucumberJson": {
+      "generate": true,
+      "outputFolder": "cypress/reports/cucumberJSON",
+      "filePrefix": "cucumber-",
+      "fileSuffix": "a.json"
+    }
+  }
+}
