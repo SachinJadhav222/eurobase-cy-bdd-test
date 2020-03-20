@@ -5,4 +5,6 @@ jobs:
        - image: circleci/ruby:2.4.1
      steps:
        - checkout
-       - run: npm run cy:run
+       - run: 
+          name: Cypress BDD
+          command: npm run cy:run
