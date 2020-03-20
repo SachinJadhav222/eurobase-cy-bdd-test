@@ -1,5 +1,4 @@
 import { Given, When, Then } from 'cypress-cucumber-preprocessor/steps'
-const element = require('../../locators/elements')
 
 const endPoint = 'https://jsonplaceholder.typicode.com/posts'
 let responseRecieved = null
