@@ -7,4 +7,4 @@ jobs:
        - checkout
        - run: 
           name: Cypress BDD
-          command: node_modules\.bin\cypress run
+          command: cypress run
