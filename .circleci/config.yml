@@ -3,8 +3,10 @@ jobs:
    build:
      docker:
        - image: circleci/ruby:2.4.1
+       - image: circleci/node:6.10
      steps:
        - checkout
+       - run: npm install
        - run: 
           name: Cypress BDD
-          command: npm test
+          command: npm run cy:run
