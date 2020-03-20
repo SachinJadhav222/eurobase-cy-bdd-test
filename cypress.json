@@ -8,19 +8,6 @@
     "*.md"
   ],
   "screenshotsFolder": "screenshots",
-  "reporter": "mochawesome",
-  "reporterOptions": {
-    "overwrite": false,
-    "html": true,
-    "json": true
-  },
-  "cypress-cucumber-preprocessor": {
-    "cucumberJson": {
-      "generate": true,
-      "outputFolder": "cypress/reports",
-      "filePrefix": "cucumber-",
-      "fileSuffix": "a.json"
-    }
-  },
+  
   "projectId": "y9upwk"
 }
