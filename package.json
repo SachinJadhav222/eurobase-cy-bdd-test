@@ -29,6 +29,12 @@
     "deepmerge": "4.2.2"
   },
   "cypress-cucumber-preprocessor": {
-    "nonGlobalStepDefinitions": false
+    "nonGlobalStepDefinitions": false,
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "cypress/reports",
+      "filePrefix": "",
+      "fileSuffix": ".cucumber"
+    }
   }
 }
