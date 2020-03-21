@@ -25,15 +25,10 @@
     "js-yaml": "3.10.0",
     "xpath.js": "1.1.0",
     "yaml-merge": "0.0.2",
-    "yargs": "11.0.0"
+    "yargs": "11.0.0",
+    "deepmerge": "4.2.2"
   },
   "cypress-cucumber-preprocessor": {
-    "nonGlobalStepDefinitions": false,
-   "cucumberJson": {
-      "generate": true,
-      "outputFolder": "cypress/reports/cucumberJSON",
-      "filePrefix": "cucumber-",
-      "fileSuffix": "a.json"
-    }
+    "nonGlobalStepDefinitions": false
   }
 }
