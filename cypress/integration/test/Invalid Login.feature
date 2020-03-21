@@ -3,7 +3,7 @@ Feature: Invalid Login Page  application
    I want to Login into app
 
    Scenario: InValiid Login
-      Given I visit "http://zero.webappsecurity.com/login.html"
+      Given I visit "zeroWeb"
       Then I entered "invalid username" at "loc_USERNAME"
       Then I entered "invalid password" at "loc_PASSWORD"
       Then I click on "loc_SUBMIT_BUTTON"

@@ -1,8 +1,9 @@
 import { Given, When, Then } from 'cypress-cucumber-preprocessor/steps'
 const locators= require('../locator').locators
+const urls=require('../../config/urls');
 
 Given('I visit {string}', URL => {
-	cy.visit(URL)
+	cy.visit(urls[URL])
 })
 
 Then('I entered {string} at {string}', (expectedValue, selector) => {
