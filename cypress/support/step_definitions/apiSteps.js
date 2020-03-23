@@ -1,13 +1,9 @@
 import { Given, When, Then } from 'cypress-cucumber-preprocessor/steps'
+import {newUser1, newUser2,MAX_Code} from '../../test-data/apiTestData'
 const apiPoints = require('../../config/endPoints')
 let expectedResponse = null
 
-const postData = {
-	id: 101,
-	title: 'foo',
-	body: 'bar',
-	userId: 1,
-}
+
 
 Given(
 	'I make request to {string} with the endpoint {string}',
@@ -36,7 +32,7 @@ Given(
 	'I make {string} request to the {string} with the endpoint {string} with JSON data',
 	(requestType, baseUrl, endPoint) => {
 		endPoint = apiPoints[baseUrl] + endPoint
-		cy.request(requestType, endPoint, postData).then(response => {
+		cy.request(requestType, endPoint,newUser1).then(response => {
 			expectedResponse = response
 			expect(response.status).to.eq(201)
 		})
@@ -44,6 +40,7 @@ Given(
 )
 
 Then('I should see response status code {string}', statusCode => {
+	cy.log(MAX_Code)
 	expect(expectedResponse.status).to.eq(Number(statusCode))
 })
 Then('I should see response body to have {string}', bodyCo => {

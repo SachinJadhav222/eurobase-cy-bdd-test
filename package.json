@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "cy:open": "cypress open",
-    "cy:run" : "cypress run",
+    "cy:run": "cypress run",
     "cy:record": "cypress run --record --key e7a3bbdc-1d3a-4ffc-aa18-52bdad68e1c6",
     "cy:verify": "cypress verify"
   },
@@ -37,5 +37,8 @@
       "filePrefix": "",
       "fileSuffix": ".cucumber"
     }
+  },
+  "devDependencies": {
+    "cypress-xpath": "^1.4.0"
   }
 }

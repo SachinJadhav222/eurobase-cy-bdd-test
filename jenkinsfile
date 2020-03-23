@@ -1,0 +1,21 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building..cypress test suite'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing..cypress test suite'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....the application after testing'
+            }
+        }
+    }
+}

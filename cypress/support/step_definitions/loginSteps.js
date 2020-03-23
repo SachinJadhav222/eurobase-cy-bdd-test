@@ -7,11 +7,11 @@ Given('I visit {string}', URL => {
 })
 
 Then('I entered {string} at {string}', (expectedValue, selector) => {
-	cy.get(locators[selector]).type(expectedValue)
+	cy.getSelector(selector).type(expectedValue)
 })
 
 Then('I click on {string}', selector => {
-	cy.get(locators[selector]).click()
+	cy.getSelector(selector).click()
 })
 
 Then('I shloud see home page', () => {
@@ -19,7 +19,17 @@ Then('I shloud see home page', () => {
 })
 
 Then('I should see {string} at {string}', (expectedValue, selector) => {
-	cy.get(locators[selector])
+	cy.getSelector(selector)
 		.should('be.visible')
 		.and('contain', expectedValue)
+})
+
+Then('I should see page title {string}',(expectedValue)=>{
+    cy.title().should('eq', expectedValue)
+})
+
+Then ('I click on xpath {string}',(selector)=>{
+	//cy.xpath('//a[contains(text(),"Contact us")]').click();
+//cy.xpath(locators[selector]).click();
+cy.getSelector(selector).click();
 })
