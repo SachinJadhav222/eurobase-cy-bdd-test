@@ -6,8 +6,9 @@
   "scripts": {
     "cy:open": "cypress open",
     "cy:run": "cypress run",
-     "cy:run:chrome": "cypress run --browser chrome",
-  "cy:run:firefox": "cypress run --browser firefox",
+    "cy:chrome-test": "cypress run --spec cypress/integration/test/*.feature --browser chrome",
+    "cy:firefox-test": "cypress run --spec cypress/integration/test/*.feature --browser firefox",
+    "cy:api-test": "cypress run --spec cypress/integration/api/*.feature",
     "cy:record": "cypress run --record --key e7a3bbdc-1d3a-4ffc-aa18-52bdad68e1c6",
     "cy:record-firefox": "cypress run --browser firefox --record --key e7a3bbdc-1d3a-4ffc-aa18-52bdad68e1c6",
     "cy:verify": "cypress verify"
