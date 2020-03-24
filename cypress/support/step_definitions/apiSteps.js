@@ -1,9 +1,7 @@
 import { Given, When, Then } from 'cypress-cucumber-preprocessor/steps'
-import {newUser1, newUser2,MAX_Code} from '../../test-data/apiTestData'
+import { newUser1, newUser2, MAX_Code } from '../../test-data/apiTestData'
 const apiPoints = require('../../config/endPoints')
 let expectedResponse = null
-
-
 
 Given(
 	'I make request to {string} with the endpoint {string}',
@@ -32,7 +30,7 @@ Given(
 	'I make {string} request to the {string} with the endpoint {string} with JSON data',
 	(requestType, baseUrl, endPoint) => {
 		endPoint = apiPoints[baseUrl] + endPoint
-		cy.request(requestType, endPoint,newUser1).then(response => {
+		cy.request(requestType, endPoint, newUser1).then(response => {
 			expectedResponse = response
 			expect(response.status).to.eq(201)
 		})

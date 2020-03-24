@@ -1,5 +1,4 @@
 import { Given, When, Then } from 'cypress-cucumber-preprocessor/steps'
-//const locators= require('../locator').locators
 const urls=require('../../config/urls');
 
 Given('I visit {string}', URL => {
@@ -28,11 +27,10 @@ Then('I should see page title {string}',(expectedValue)=>{
     cy.title().should('eq', expectedValue)
 })
 
-Then ('I click on xpath {string}',(selector)=>{
-	//cy.xpath('//a[contains(text(),"Contact us")]').click();
-//cy.xpath(locators[selector]).click();
-cy.getSelector(selector).click();
-})
 Then('I scrolled to bottom',()=>{
 	cy.scrollTo('bottom');
+})
+
+Then('I select {string} from dropdown at {string}',(expedtedValue,selector)=>{
+   cy.getSelector(selector).select(expedtedValue);
 })
