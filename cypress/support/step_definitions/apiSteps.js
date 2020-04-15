@@ -18,6 +18,7 @@ Given(
 Given(
 	'I make {string} request to the {string} with the endpoint {string}',
 	(requestType, baseUrl, endPoint) => {
+		console.log("THIS IS FOR SONAR QUBE")
 		endPoint = apiPoints[baseUrl] + endPoint
 		cy.request(requestType, endPoint).then(response => {
 			expectedResponse = response
