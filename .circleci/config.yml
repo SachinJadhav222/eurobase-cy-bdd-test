@@ -20,7 +20,7 @@
 #       - build
 #       - test
 
-
+# working ci configuration for seresse execution
 version: 2.1
 orbs:
   node: circleci/node@1.1.6
