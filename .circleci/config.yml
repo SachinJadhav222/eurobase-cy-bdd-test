@@ -1,3 +1,6 @@
+version: 2.1
+orbs:
+  node: circleci/node@1.1.6
 jobs:
   build:
     executor:
@@ -12,7 +15,6 @@ jobs:
       - checkout
       - run: npm test
 workflows:
-  version: 2
   eurobase_cy_bdd_test:
     jobs:
       - build
