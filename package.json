@@ -6,6 +6,7 @@
   "scripts": {
     "cy:open": "cypress open",
     "cy:run": "cypress run",
+    "test": "cypress run",
     "cy:chrome-test": "cypress run --spec cypress/integration/test/*.feature --browser chrome",
     "cy:firefox-test": "cypress run --spec cypress/integration/test/*.feature --browser firefox",
     "cy:api-test": "cypress run --spec cypress/integration/api/*.feature",
