@@ -26,7 +26,8 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
 
       - circleci-cli/install
-      - run: npm test
+      - cypress/run
+      #- run: npm test
       #- run: npm run manual:tests
       #- run: npm run docs
 
