@@ -18,7 +18,7 @@ jobs:
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
 
-      - run: npm ci
+      - run: npm install
 
       - save_cache:
           paths:
@@ -26,8 +26,8 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
 
       - circleci-cli/install
-      - cypress/run
-      #- run: npm test
+      # - cypress/run
+      - run: npm test
       #- run: npm run manual:tests
       #- run: npm run docs
 
