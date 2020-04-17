@@ -66,10 +66,12 @@ jobs:
       - checkout
       - run: npm install
   ui-test:
+    executor: 
+      name: cypress/base-10
     steps:
-    - checkout
-    - cypress/install
-    - cypress/run
+      - checkout
+      - cypress/install
+      - cypress/run
   api-test:
     executor:
       name: node/default
