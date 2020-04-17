@@ -13,6 +13,7 @@ mochawesome-report/
 screenshots/
 videos/
 npm-debug.log
+ci-configFiles
        
 
 
