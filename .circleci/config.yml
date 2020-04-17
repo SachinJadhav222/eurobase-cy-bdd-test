@@ -8,12 +8,18 @@ jobs:
     steps:
       - checkout
       - run: npm install
-  test:
+  ui-test:
     executor:
       name: node/default
     steps:
       - checkout
-      - run: echo "Testing Successful"
+      - run: echo "UI Testing Successful"
+  api-test:
+    executor:
+      name: node/default
+    steps:
+      - checkout
+      - run: echo "API Testing Successful"
   deploy:
     executor:
      name: node/default
@@ -24,12 +30,16 @@ workflows:
   eurobase_cy_bdd_test:
     jobs:
       - build
-      - test: 
+      - ui-test: 
+         requires:
+            - build
+      - api-test: 
          requires:
             - build
       - deploy: 
          requires:
-            - test
+            - ui-test
+            - api-test
 
 
 # working ci configuration for seresse execution
