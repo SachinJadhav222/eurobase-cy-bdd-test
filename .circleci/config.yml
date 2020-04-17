@@ -20,6 +20,12 @@ jobs:
     steps:
       - checkout
       - run: echo "API Testing Successful"
+  security-test:
+    executor:
+      name: node/default
+    steps:
+      - checkout
+      - run: echo "ZAP Security Testing Successful"
   deploy:
     executor:
      name: node/default
@@ -36,10 +42,14 @@ workflows:
       - api-test: 
          requires:
             - build
-      - deploy: 
+      - security-test: 
          requires:
             - ui-test
             - api-test
+      - deploy: 
+         requires:
+            - security-test
+          
 
 
 # working ci configuration for seresse execution
