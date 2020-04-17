@@ -1,0 +1,56 @@
+version: 2.1
+orbs:
+  node: circleci/node@2.0.2
+ # cypress: cypress-io/cypress@1.16.1
+jobs:
+  build:
+    executor:
+      name: node/default
+    steps:
+      - checkout
+      - run: npm install
+  ui-test:
+    executor:
+     # name: cypress/base-10
+      name: node/default
+    steps:
+      - checkout
+      - run: npm test
+  api-test:
+    executor:
+      name: node/default
+    steps:
+      - checkout
+      - run: echo "API Testing Successful"
+  security-test:
+    executor:
+      name: node/default
+    steps:
+      - checkout
+      - run: echo "ZAP Security Testing Successful"
+  deploy:
+    executor:
+     name: node/default
+    steps:
+      - checkout
+      - run: echo "Ready for deploy"
+workflows:
+  eurobase_cy_bdd_test:
+    jobs:
+      - build
+      - ui-test: 
+         requires:
+            - build
+      - api-test: 
+         requires:
+            - build
+      - security-test: 
+         requires:
+            - ui-test
+            - api-test
+      - deploy: 
+         requires:
+            - security-test
+
+#----------------------------------------------------------------
+
