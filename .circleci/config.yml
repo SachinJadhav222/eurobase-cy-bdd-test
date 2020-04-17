@@ -1,6 +1,7 @@
 version: 2.1
 orbs:
   circleci-cli: circleci/circleci-cli@0.1.8
+  cypress: cypress-io/cypress@1.16.1
 jobs:
   build:
     docker:
