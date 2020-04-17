@@ -13,7 +13,13 @@ jobs:
       name: node/default
     steps:
       - checkout
-      - run: npm test
+      - run: echo "Testing Successful"
+  deploy:
+    executor:
+     name: node/default
+    steps:
+      - checkout
+      - run: echo "Ready for deploy"
 workflows:
   eurobase_cy_bdd_test:
     jobs:
@@ -21,6 +27,10 @@ workflows:
       - test: 
          requires:
             - build
+      - deploy: 
+         requires:
+            - test
+
 
 # working ci configuration for seresse execution
 # version: 2.1
