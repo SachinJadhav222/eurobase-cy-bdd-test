@@ -1,7 +1,6 @@
 version: 2.1
 orbs:
   node: circleci/node@2.0.2
- # cypress: cypress-io/cypress@1.16.1
 jobs:
   build:
     executor:
@@ -11,7 +10,6 @@ jobs:
       - run: npm install
   ui-test:
     executor:
-     # name: cypress/base-10
       name: node/default
     steps:
       - checkout
