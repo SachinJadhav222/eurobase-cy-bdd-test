@@ -18,7 +18,7 @@ workflows:
   eurobase_cy_bdd_test:
     jobs:
       - build
-      - test 
+      - test: 
          requires:
             - build
 
