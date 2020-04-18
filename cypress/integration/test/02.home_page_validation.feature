@@ -3,6 +3,6 @@ Feature: Home page assertion
     I wat to see
     home page of Eurobase
 
-    Scenario: Hoem page title
+    Scenario: Home page title
         Given I visit "eurobaseWeb"
         Then I should see page title "Insurance and Banking Software and Services | Eurobase International"
