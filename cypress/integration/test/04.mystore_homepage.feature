@@ -10,4 +10,5 @@ Feature: My Store Home page assertion
         Then I should see page title "Login - My Store"
         Then I entered "JadhavSachin@yahoo.com" at "loc04_create_email"
         Then I click on "loc04_create_submit_button"
-        Then I shloud see "loc04_first_name" is visible
+        #Then I entered "sachin" at "loc04_first_name"
+        Then I shloud see "loc04_account_creation_form" is visible
