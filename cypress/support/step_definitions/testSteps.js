@@ -23,6 +23,11 @@ Then('I should see {string} at {string}', (expectedValue, selector) => {
 		.and('contain', expectedValue)
 })
 
+Then('I should see {string} is visible', (selector) => {
+	cy.getSelector(selector)
+		.should('be.visible')
+})
+
 Then('I should see page title {string}',(expectedValue)=>{
     cy.title().should('eq', expectedValue)
 })
