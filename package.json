@@ -12,7 +12,7 @@
     "cy:firefox-test": "cypress run --spec cypress/integration/test/*.feature --browser firefox",
     "cy:api-test": "cypress run --spec cypress/integration/api/**/*",
     "cy:record": "cypress run --record --key e7a3bbdc-1d3a-4ffc-aa18-52bdad68e1c6",
-    "cy:parallel":"cypress run --record --key e7a3bbdc-1d3a-4ffc-aa18-52bdad68e1c6 --parallel",
+    "cy:parallel": "cypress run --record --key e7a3bbdc-1d3a-4ffc-aa18-52bdad68e1c6 --parallel",
     "cy:record-firefox": "cypress run --browser firefox --record --key e7a3bbdc-1d3a-4ffc-aa18-52bdad68e1c6",
     "cy:verify": "cypress verify"
   },
