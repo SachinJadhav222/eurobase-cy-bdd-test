@@ -7,16 +7,17 @@ function myName(){
 
 function copyFiles() {
     console.log('This is copy file ===================>')
-    return src('./locators/*.js').pipe(gulp.dest('./gilpDestination'))
+    return src('cypress/locators/*.js').pipe(gulp.dest('cypress/gilpDestination'))
 }
 
 
 
 exports.default=myName;
+exports.copyFiles=copyFiles;
 
 gulp.task('myName1',(done)=>{
     console.log('This is Gulp Task file  May name 1 ===================>');
-  //  return src('.*.js').pipe(gulp.dest('./locators/gilpDestination'))
+   // return src('.*.js').pipe(gulp.dest('./locators/gilpDestination'))
 
 })
 
