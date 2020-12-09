@@ -7,7 +7,7 @@ function myName(){
 
 function copyFiles() {
     console.log('This is copy file ===================>')
-    return src('cypress/locators/*.js').pipe(gulp.dest('cypress/gilpDestination'))
+    return src('cypress/locators/*.js').pipe(gulp.dest('cypress/reports/gilpDestination'))
 }
 
 
